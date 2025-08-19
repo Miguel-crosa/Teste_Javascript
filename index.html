@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes de Javascript</title>
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+
+<body>
+    <p id="inic">Exercício 04</p>
+
+    <button id="confirm" class="tamanho" type="submit" onclick="botaoConfirmado()">Confirma.</button>
+    <button id="cancela" class="tamanho" type="button" onclick="botaoCancela()">Cancela.</button>
+    <button id="limpar" class="tamanho" type="reset" onclick="botaoLimpar()">Limpa.</button>
+
+    <p id="nomeTitulo"></p>
+
+    <p id="imagem" style="text-align: center;">
+        <img id="jscript" src="_imagens/overview.png" alt="Codigos em javascript" width="50%" height="50%"
+            onclick="textoExp()">
+    </p>
+
+    <button type="button" onclick="window.print()">Imprimir a pagina</button>
+
+    <script>
+
+        let confirmado = document.getElementById("confirm");
+        let cancela = document.getElementById("cancela");
+        let limpar = document.getElementById("limpar");
+
+        function botaoConfirmado() {
+            alert("Confirmado!!!");
+        }
+
+        function botaoCancela() {
+            alert("Cancelado...");
+        }
+
+        function botaoLimpar() {
+            alert("Limpado!!!");
+        }
+
+        let nome = document.getElementById("nomeTitulo").innerHTML = document.title;
+        let pgFinal = document.getElementById("imagem");
+
+        function textoExp() {
+            pgFinal.innerHTML = "<h3>" + "Código em Javascript nomeado de 'api.js', que esta importando, usando parametros, return, exportando e criando contantes/condicionais" + "</h3>";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
